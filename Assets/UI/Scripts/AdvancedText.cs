@@ -51,18 +51,11 @@ public class AdvancedText : TextMeshProUGUI
 
     private CustomTextPreprocesseor SelfPreprocessor => (CustomTextPreprocesseor)textPreprocessor;
 
-    protected override void Start()
-    {
-        base.Start();
-
-    }
-
     public void TypingText(string content)
     {
         SetText(content);
         StartCoroutine(Typing());
     }
-
 
     private int _typingIndex;
     private float _defultInterval = 0.2f;
